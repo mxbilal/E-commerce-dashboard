@@ -35,7 +35,7 @@ export const options = {
 };
 
 const Dashboard = () => {
-  const socket = io(import.meta.env.VITE_BASE_URL, {
+  const socket = io('ws://localhost:4000', {
     withCredentials: true,
     extraHeaders: {
       "my-custom-header": "abcd"
@@ -102,7 +102,7 @@ const Dashboard = () => {
             bordered={false}
             style={{ background: "lightblue" }}
           >
-            {sales.sortedSales[0].name} --- {sales.sortedSales[0].totalOrder}{" "}
+            {sales.sortedSales[0]?.name} --- {sales.sortedSales[0]?.totalOrder}{" "}
             Sold
           </Card>
         </Col>
