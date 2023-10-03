@@ -35,7 +35,9 @@ export const options = {
 };
 
 const Dashboard = () => {
-  const socket = io('ws://localhost:4000', {
+  const socket = io('wss://web-rrv7af31dre5.up-pl-waw1-1.apps.run-on-seenode.com', {
+    transports: ["websocket"],
+    allowEIO3: true,
     withCredentials: true,
     extraHeaders: {
       "my-custom-header": "abcd"
