@@ -35,7 +35,7 @@ export const options = {
 };
 
 const Dashboard = () => {
-  const socket = io("ws://localhost:4000");
+  const socket = io(`ws://${import.meta.env.VITE_BASE_URL}:4000`);
   const [barData, setBarData] = useState({
     labels: [],
     datasets: [],
