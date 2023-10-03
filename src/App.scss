@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 30px;
+    height: auto;
+  }
+
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.public-route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightyellow;
+
+  .login-form {
+    width: 500px;
+    background: white;
+    padding: 40px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+  }
+
+  .login-form-forgot {
+    float: right;
+  }
+
+  .ant-col-rtl .login-form-forgot {
+    float: left;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+}
+
+.review-main {
+  .review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .review-item-container {
+    padding: 0 10px;
+
+    .review-item-main {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      .review-item-name {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .review-item-rate {
+        @extend .review-item-name;
+
+        p {
+          font-style: italic;
+        }
+      }
+
+      .review-para {
+        text-align: justify;
+      }
+    }
+  }
+}
