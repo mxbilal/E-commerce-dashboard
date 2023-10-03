@@ -35,7 +35,12 @@ export const options = {
 };
 
 const Dashboard = () => {
-  const socket = io(`ws://${import.meta.env.VITE_BASE_URL}:4000`);
+  const socket = io(import.meta.env.VITE_BASE_URL, {
+    withCredentials: true,
+    extraHeaders: {
+      "my-custom-header": "abcd"
+    }
+  });
   const [barData, setBarData] = useState({
     labels: [],
     datasets: [],
